@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1811d1ffa5.js" crossorigin="anonymous"></script>
+  <title>Liran Podolsky</title>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container2">
+      <div class="home">
+        <a href="#home" style="text-decoration: none" onclick="scrollToAnchor('top')">HOME</a>
+      </div>
+      <!-- Dropdown for small screens -->
+      <div class="dropdown">
+        <button class="dropbtn">
+          <i class="fa-solid fa-bars"></i> <!-- Use a suitable icon for the dropdown button -->
+        </button>
+        <div class="dropdown-content">
+          <a href="#info" onclick="scrollToAnchor('info')">INFO</a>
+          <a href="#platform" onclick="scrollToAnchor('platformsAnchor')">PLATFORMS</a>
+          <a href="#projects" onclick="scrollToAnchor('projectsAnchor')">PROJECTS</a>
+          <a href="#certifications" onclick="scrollToAnchor('certificationsAnchor')">CERTIFICATIONS</a>
+          <a href="#contacts" onclick="scrollToAnchor('contactAnchor')">CONTACT</a>
+        </div>
+      </div>
+      <!-- Original nav-links for larger screens -->
+      <div class="nav-links">
+        <a href="#info" onclick="scrollToAnchor('info')">INFO</a>
+        <a href="#platform" onclick="scrollToAnchor('platformsAnchor')">PLATFORMS</a>
+        <a href="#projects" onclick="scrollToAnchor('projectsAnchor')">PROJECTS</a>
+        <a href="#certifications" onclick="scrollToAnchor('certificationsAnchor')">CERTIFICATIONS</a>
+        <a href="#contacts" onclick="scrollToAnchor('contactAnchor')">CONTACT</a>
+      </div>
+    </div>
+  </header>
+
+  <header>
+    <div class="nav-container">
+        <div class="home">
+          <a href="#home" style="text-decoration: none; color: rgb(85, 26, 139);" onclick="scrollToAnchor('top')">HOME</a>
+        </div>
+        <div class="nav-links">
+            <a href="#info" onclick="scrollToAnchor('info')">INFO</a>
+            <a href="#platform" onclick="scrollToAnchor('platformsAnchor')">PLATFORMS</a>
+            <a href="#projects" onclick="scrollToAnchor('projectsAnchor')">PROJECTS</a>
+            <a href="#certifications" onclick="scrollToAnchor('certificationsAnchor')">CERTIFICATIONS</a>
+            <a href="#contacts" onclick="scrollToAnchor('contactAnchor')">CONTACT</a>
+        </div>
+    </div>
+  </header>
+
+  <div class="home-link2">
+    <a href="#home" style="text-decoration: none; color: rgb(85, 26, 139);" onclick="scrollToAnchor('top')">HOME</a>
+  </div>
+
+  <div id="top"></div>
+  <div id="name">Liran Podolsky</div>
+
+  <div class="icons">
+    <a href="https://www.linkedin.com/in/liran-podolsky-875928265/" target="blank" style="color: rgb(85, 26, 139);">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <i class="fa-brands fa-twitter"></i>
+    <a href="https://github.com/liranpod" target="_blank" style="color: rgb(85, 26, 139);">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+
+  <div id="mainIntroParagraph">
+    <p>Welcome to my portfolio!</p>
+    <p>I'm an aspiring data scientist currently majoring in mathematics at Monash University.</p>
+  </div>
+
+  <a href="#info">
+    <div id="moreInfo" onclick="scrollToAnchor('info')">
+      MORE INFO
+    </div>
+  </a>  
+  <a href="#contacts">
+    <div id="contact" onclick="scrollToAnchor('contactAnchor')">
+      CONTACT
+    </div>
+  </a>
+
+  <div id="arrowDown" onclick="scrollToAnchor('info')">
+    <i class="fa-solid fa-arrow-down"></i>
+  </div>
+
+  <div id="info"></div>
+  <img src="images/biopic.jpg" class="circular" id="photoOfMe">
+  
+  
+  <div id="infoText">
+    <p>Hi, I'm Liran!</p>
+    <br>
+    <p>I love all things data. I believe most data has it's own story to tell.</p>
+    <p>My job is to find out its story - this could be simple visualization or even statistical analysis!</p>
+    <p>I have worked with many different programming languages and completed various projects within data science.</p>
+    <br>
+    <p>I'm currently in my final year of my Bachelor's Degree at Monash University and I have completed an internship in Data.</p>
+    <p>Feel free to keep scrolling and have a look at some of my work!</p>
+  </div>
+
+  <div id="platformsAnchor"></div>
+  <div id="platforms">PLATFORMS</div>
+  <div>
+    <img src="images/data science.jpeg" id="dataScienceImage">
+    <p id="dataScience">DATA SCIENCE</p>
+  </div>
+  <div>
+    <img src="images/data viz.jpeg" id="dataVizImage">
+    <p id="dataViz">DATA VIZUALIZATION</p>
+  </div>
+
+  <i class="fa-solid fa-plus" id="plus1" onclick=toggleInfoDS()></i>
+  <i class="fa-solid fa-plus" id="plus2" onclick=toggleLanguages()></i>
+  <i class="fa-solid fa-plus" id="plus3" onclick=toggleInfoDV()></i>
+  
+  <div id="dataScienceObjects">
+    <p id="AI" style="display: none;">ARTIFICIAL INTELLIGENCE</p>
+    <p id="ML" style="display: none;">MACHINE LEARNING</p>
+    <P id="SA" style="display: none;">STATISTICAL ANALYSIS</P>
+  </div>
+
+  <div id="dataVizObjects">
+    <p id="TAB" style="display: none;">TABLEAU</p>
+    <p id="PBI" style="display: none;">POWER BI</p>
+  </div>
+
+  <div id="scrollDestination"></div>
+  <img src="images/python.jpeg" id="python" style="display: none;">
+  <img src="images/html.png" id="html" style="display: none;">
+  <img src="images/css.png" id="css" class="circular" style="display: none;">
+  <img src="images/javascript.png" id="javaScript" class="circular" style="display: none;">
+  <img src="images/r studio.svg" id="rStudio" style="display: none;">
+  <img src="images/sql.svg" id="sql" style="display: none;">
+  <img src="images/c++.jpeg" id="cpp" style="display: none;">
+  <img src="images/java.png" id="java" class="circular" style="display: none;">
+  <img src="images/matlab.png" id="matlab" style="display: none;">
+
+  
+  <div id="projectsAnchor"></div>
+
+  <p id="projectsInfo">Here are some of my favourite projects!</p>
+  <br>
+  <p id="projectsInfo2">(code can be found on github)</p>
+  <i class="fa-solid fa-arrow-down" onclick="scrollToAnchor('projectsAnchor')" id="arrowDown2"></i>
+
+  <img src="images/pneumoniadetection.jpeg" id="pneumoniaAI">
+  <p id="pneumoniaHeading">Pneumonia Detection AI</p>
+  <p id="python1">Python</p>
+  <p id="keras1">Keras</p>
+  <p id="sequentialModel1">Sequential Model</p>
+  <p id="cnn1">CNN</p>
+  <p id="pneumoniaAIInfo">A pneumonia detection artificial intelligence with > 90% accuracy! This was a typical convolutional neural network.</p>
+  <a href="https://github.com/liranpod" target="blank" style="text-decoration: none; color: blue;">
+    <p id="readMore1">Read more -></p>
+  </a>
+
+  <img src="images/lipreader.jpeg" id="lipReader">
+  <p id="lipReaderHeading">Lip Reader AI</p>
+  <p id="python4">Python</p>
+  <p id="tensorflow4">TensorFlow</p>
+  <p id="openCV4">OpenCV</p>
+  <p id="lipReaderInfo">An artificial intelligence that can lip read! This was a sequential model involving bidirectional LSTM layers.</p>
+  <a href="https://github.com/liranpod" target="blank" style="text-decoration: none; color: blue;">
+    <p id="readMore4">Read more -></p>
+  </a>
+
+  <img src="images/commenttoxicity.webp" id="commentToxicity">
+  <p id="commentToxicityHeading">Comment Toxicity w/ Interface</p>
+  <p id="python2">Python</p>
+  <p id="keras2">Keras</p>
+  <p id="vectorizer2">Vectorizer</p>
+  <p id="lp2">Language Processing</p>
+  <p id="commentToxicityInfo">I made a comment toxicity app that would hide rude comments. The Model had around 96% accuracy. </p>
+  <a href="https://github.com/liranpod" target="blank" style="text-decoration: none; color: blue;">
+    <p id="readMore2">Read more -></p>
+  </a>
+  
+  <img src="images/marioAI.jpeg" id="marioAI">
+  <p id="marioAIHeading">Mario AI Gameplay</p>
+  <p id="python3">Python</p>
+  <p id="openAI3">OpenAI Gym</p>
+  <p id="reinforcementLearning3">Reinforcement Learning</p>
+  <p id="stableBaselines3">Stable Baselines 3</p>
+  <p id="marioAIInfo">Reinforcement learning allowed me to play Mario! This was created with the help of OpenAI Gym.</p>
+  <a href="https://github.com/liranpod" target="blank" style="text-decoration: none; color: blue;">
+    <p id="readMore3">Read more -></p>
+  </a>
+
+  <img src="images/dataviz.png" id="datavizProject">
+  <p id="datavizHeading">Data Visualization - Tableau</p>
+  <p id="eda5">EDA</p>
+  <p id="tableau5">Tablaeu</p>
+  <p id="datavizInfo">I analysed different jobs & salaries <br> within the data science field using <br> Tablaeu.</p>
+  <a href="https://github.com/liranpod" target="blank" style="text-decoration: none; color: blue;">
+    <p id="readMore5">Read more -></p>
+  </a>
+
+  <!--
+  <p id="projectsEnd">
+    The projects you see here are mostly deep learning related. I have finished many other projects related to data vizualization and machine learning.
+    <br>
+    I am also certified in some cloud based services!
+  </p>
+  -->
+
+
+  <div id="certificationsAnchor"></div>
+
+  <p id="certificationsLabel">CERTIFICATIONS</p>
+
+  <img src="images/azure.png" id="azure">
+
+  <img src="images/aws.png" id="aws">
+
+  <img src="images/edx.png" id="edx">
+
+  <img src="images/mitocw.png" id="mit">
+
+  <img src="images/leetcode.png" id="lc">
+
+  <img src="images/Kaggle_logo.png" id="kaggle">
+
+  <div class="icons2">
+    <i class="fa-solid fa-check"></i>
+    <p id="AZ-900"> Exam AZ-900</p>
+    <br>
+    <i class="fa-solid fa-check"></i>
+    <p id="AI-900"> Exam AI-900</p>
+    <br>
+    <i class="fa-solid fa-check"></i>
+    <p id="DP-100"> Exam DP-100</p>
+  </div>
+
+  <div class="icons3">
+    <i class="fa-solid fa-check"></i>
+    <p id="edx1"> LinuxFoundationX LFS101x</p>
+    <br>
+    <i class="fa-solid fa-check"></i>
+    <p id="edx2"> HarvardX Data Science PH125.2x</p>
+    <br>
+    <i class="fa-solid fa-check"></i>
+    <p id="mit1"> MIT15.075J Statistics & Data</p>
+  </div>
+  
+  <div class="icons4">
+    <i class="fa-solid fa-check"></i>
+    <p id="lc1"> SQL 50</p>
+    <br>
+  </div>
+
+  <div class="icons5">
+    <i class="fa-solid fa-check"></i>
+    <p id="kaggle1"> Computer Vision</p>
+    <br>
+  </div>
+
+  <div id="contactAnchor"></div>
+  <div id="contactDiv">CONTACT</div>
+  <p id="contactInfoText">
+    Feel free to message me if you have any questions!
+    <br>
+    If you want to see any more of my work or even collaborate with me, just shoot me an email at <span id="email">liranpod@gmail.com</span>
+    <br>
+    <br>
+    Otherwise, you can also reach me on twitter or linkedin.
+    Thank you! 
+  </p>
+
+  <a href="https://www.linkedin.com/in/liran-podolsky-875928265/" target="_blank">
+    <div id="finalLinkedIn">LinkedIn</div>
+  </a>
+
+  <a>
+    <div id="finalTwitter">Twitter</div>
+  </a>
+
+  <a href="https://github.com/liranpod" target="_blank">
+    <div id="finalGitHub">GitHub</div>
+  </a>
+
+  <div id="testdiv"></div>
+  
+
+  <script src="index.js"></script>
+
+</body>
+</html>
